@@ -5,48 +5,54 @@ const episodes = [
   {
     id: 1,
     title: "The Future of AI in Underwriting",
-    description: "How machine learning is transforming risk assessment and policy pricing in the insurance industry.",
-    duration: "42 min",
+    description:
+      "A short highlight from EP 45 on how machine learning is transforming risk assessment and policy pricing in the insurance industry.",
+    duration: "3 min clip",
     episode: "EP 45",
     featured: true,
   },
   {
     id: 2,
     title: "Claims Automation Deep Dive",
-    description: "Breaking down the technology behind instant claims processing and customer satisfaction.",
-    duration: "38 min",
+    description:
+      "A focused clip from EP 44 breaking down the technology behind instant claims processing and customer satisfaction.",
+    duration: "4 min clip",
     episode: "EP 44",
     featured: false,
   },
   {
     id: 3,
     title: "InsurTech Startup Stories",
-    description: "Interviews with founders who are disrupting traditional insurance models.",
-    duration: "55 min",
+    description:
+      "A highlight from EP 43 featuring founders who are disrupting traditional insurance models.",
+    duration: "5 min clip",
     episode: "EP 43",
     featured: false,
   },
   {
     id: 4,
     title: "Regulatory Challenges in 2024",
-    description: "Navigating compliance while innovating in the insurance technology space.",
-    duration: "35 min",
+    description:
+      "A clip from EP 42 on navigating compliance while innovating in the insurance technology space.",
+    duration: "3 min clip",
     episode: "EP 42",
     featured: false,
   },
   {
     id: 5,
     title: "Customer Experience Revolution",
-    description: "Why policyholder experience is the new battleground for insurance companies.",
-    duration: "41 min",
+    description:
+      "A short segment from EP 41 on why policyholder experience is the new battleground for insurance companies.",
+    duration: "4 min clip",
     episode: "EP 41",
     featured: false,
   },
   {
     id: 6,
     title: "Data Security Best Practices",
-    description: "Protecting sensitive customer information in an increasingly connected world.",
-    duration: "47 min",
+    description:
+      "A concise clip from EP 40 about protecting sensitive customer information in an increasingly connected world.",
+    duration: "3 min clip",
     episode: "EP 40",
     featured: false,
   },
@@ -68,13 +74,14 @@ const PodcastClips = () => {
             </span>
           </div>
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-            Listen to Our
+            Listen to Short
             <br />
-            <span className="text-gradient">Latest Episodes</span>
+            <span className="text-gradient">Podcast Clips</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Deep dives into insurance technology, industry trends, and conversations
-            with the leaders shaping the future of insurance.
+            Bite-sized highlights from our full-length episodes, featuring the most
+            insightful moments on insurance technology, industry trends, and
+            conversations with the leaders shaping the future of insurance.
           </p>
         </div>
 
@@ -113,7 +120,7 @@ const PodcastClips = () => {
                   </p>
                   <Button variant="hero" size="lg">
                     <Play className="w-5 h-5" />
-                    Listen Now
+                    Play Clip
                   </Button>
                 </div>
               </div>
