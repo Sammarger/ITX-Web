@@ -11,8 +11,8 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <Features />
         <PodcastClips />
+        <Features />
         <CTA />
       </main>
       <Footer />
