@@ -38,7 +38,7 @@ const Hero = () => {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
             <Button variant="hero" size="xl">
-              Start Free Trial
+              Book a Call
               <ArrowRight className="w-5 h-5" />
             </Button>
             <Button variant="heroOutline" size="xl">
@@ -67,8 +67,7 @@ const Hero = () => {
         {/* Stats */}
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-700 delay-700">
           {[
-            { value: "500+", label: "Insurance Clients" },
-            { value: "$2B+", label: "Premiums Processed" },
+            { value: "50+", label: "Insurance Clients" },
             { value: "50%", label: "Faster Claims" },
             { value: "24/7", label: "Support Available" },
           ].map((stat) => (

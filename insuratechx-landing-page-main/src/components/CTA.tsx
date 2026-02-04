@@ -24,11 +24,11 @@ const CTA = () => {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button variant="hero" size="xl">
-                Start Your Free Trial
+                Schedule a Call
                 <ArrowRight className="w-5 h-5" />
               </Button>
               <Button variant="heroOutline" size="xl" className="border-secondary-foreground/30 text-secondary-foreground hover:bg-secondary-foreground/10 hover:border-secondary-foreground/50">
-                Schedule a Demo
+                Contact Us
               </Button>
             </div>
             <p className="text-sm text-secondary-foreground/50 mt-6">
