@@ -1,4 +1,5 @@
-import { Shield, Instagram, Facebook, Twitter } from "lucide-react";
+import { Instagram, Facebook, Twitter } from "lucide-react";
+import ITXHeaderLogo from "@/assets/ITX_Header_Logo.svg";
 
 const Footer = () => {
   const footerLinks = {
@@ -21,8 +22,12 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <a href="/" className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 rounded-xl gradient-primary flex items-center justify-center">
-                <Shield className="w-5 h-5 text-primary-foreground" />
+              <div className="w-10 h-10 rounded-xl overflow-hidden flex items-center justify-center bg-transparent">
+                <img
+                  src={ITXHeaderLogo}
+                  alt="InsuraTechX logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <span className="text-xl font-bold text-secondary-foreground">
                 Insura<span className="text-primary">TechX</span>
