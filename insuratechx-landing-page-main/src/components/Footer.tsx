@@ -1,4 +1,4 @@
-import { Instagram, Facebook, Twitter } from "lucide-react";
+import { Instagram, Youtube, Twitter } from "lucide-react";
 import ITXHeaderLogo from "@/assets/ITX_Header_Logo.svg";
 
 const Footer = () => {
@@ -11,7 +11,7 @@ const Footer = () => {
 
   const socialLinks = [
     { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
-    { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
+    { icon: Youtube, href: "https://youtube.com", label: "YouTube" },
     { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
   ];
 
