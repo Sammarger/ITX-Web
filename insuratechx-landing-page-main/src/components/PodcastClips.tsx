@@ -1,60 +1,51 @@
 import { Play, Clock, Headphones } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+import Ep1ImpactOnLeaders from "../assets/EP1 - AIs Impact on leaders.mp4";
+import Ep1ImpactOnOperations from "../assets/EP1 - AIs impact on operations.mp4";
+import Ep1AmplifiedIncome from "../assets/EP1 - Amplified Income.mp4";
+import Ep1DogWontEatDogFood from "../assets/EP1 - The dog who won't eat dog food.mp4";
+
 const episodes = [
   {
     id: 1,
-    title: "The Future of AI in Underwriting",
+    title: "AI's Impact on Leaders",
     description:
-      "A short highlight from EP 45 on how machine learning is transforming risk assessment and policy pricing in the insurance industry.",
+      "From EP 1: how AI is reshaping leadership, decision making, and strategic planning in insurance organisations.",
     duration: "3 min clip",
-    episode: "EP 45",
+    episode: "EP 1",
     featured: true,
+    videoSrc: Ep1ImpactOnLeaders,
   },
   {
     id: 2,
-    title: "Claims Automation Deep Dive",
+    title: "AI's Impact on Operations",
     description:
-      "A focused clip from EP 44 breaking down the technology behind instant claims processing and customer satisfaction.",
+      "From EP 1: a focused breakdown of how AI is driving efficiency and automation across insurance operations.",
     duration: "4 min clip",
-    episode: "EP 44",
+    episode: "EP 1",
     featured: false,
+    videoSrc: Ep1ImpactOnOperations,
   },
   {
     id: 3,
-    title: "InsurTech Startup Stories",
+    title: "Amplified Income",
     description:
-      "A highlight from EP 43 featuring founders who are disrupting traditional insurance models.",
+      "From EP 1: how brokers and carriers can use AI to unlock new revenue streams and amplify existing income.",
     duration: "5 min clip",
-    episode: "EP 43",
+    episode: "EP 1",
     featured: false,
+    videoSrc: Ep1AmplifiedIncome,
   },
   {
     id: 4,
-    title: "Regulatory Challenges in 2024",
+    title: "The Dog Who Won't Eat Dog Food",
     description:
-      "A clip from EP 42 on navigating compliance while innovating in the insurance technology space.",
+      "From EP 1: a story about why true product–market fit matters more than hype, especially with AI products.",
     duration: "3 min clip",
-    episode: "EP 42",
+    episode: "EP 1",
     featured: false,
-  },
-  {
-    id: 5,
-    title: "Customer Experience Revolution",
-    description:
-      "A short segment from EP 41 on why policyholder experience is the new battleground for insurance companies.",
-    duration: "4 min clip",
-    episode: "EP 41",
-    featured: false,
-  },
-  {
-    id: 6,
-    title: "Data Security Best Practices",
-    description:
-      "A concise clip from EP 40 about protecting sensitive customer information in an increasingly connected world.",
-    duration: "3 min clip",
-    episode: "EP 40",
-    featured: false,
+    videoSrc: Ep1DogWontEatDogFood,
   },
 ];
 
@@ -91,10 +82,14 @@ const PodcastClips = () => {
             <div className="relative rounded-3xl bg-card border border-border overflow-hidden shadow-soft hover:shadow-glow transition-all duration-300 group">
               <div className="absolute inset-0 gradient-primary opacity-5 group-hover:opacity-10 transition-opacity" />
               <div className="relative p-8 md:p-12 flex flex-col md:flex-row items-center gap-8">
-                {/* Play Button */}
-                <div className="relative flex-shrink-0">
-                  <div className="w-32 h-32 md:w-40 md:h-40 rounded-2xl gradient-primary flex items-center justify-center shadow-glow group-hover:scale-105 transition-transform duration-300 cursor-pointer">
-                    <Play className="w-12 h-12 md:w-16 md:h-16 text-primary-foreground ml-2" fill="currentColor" />
+                {/* Featured Clip Preview */}
+                <div className="relative flex-shrink-0 w-full md:w-[320px]">
+                  <div className="rounded-2xl overflow-hidden shadow-glow group-hover:scale-[1.02] transition-transform duration-300 cursor-pointer bg-black">
+                    <video
+                      src={featuredEpisode.videoSrc}
+                      controls
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div className="absolute -top-2 -right-2 px-3 py-1 rounded-full bg-accent text-accent-foreground text-xs font-bold">
                     NEW
@@ -118,9 +113,15 @@ const PodcastClips = () => {
                   <p className="text-muted-foreground text-lg mb-6 max-w-xl">
                     {featuredEpisode.description}
                   </p>
-                  <Button variant="hero" size="lg">
-                    <Play className="w-5 h-5" />
-                    Play Clip
+                  <Button
+                    variant="hero"
+                    size="lg"
+                    asChild
+                  >
+                    <a href={featuredEpisode.videoSrc} target="_blank" rel="noreferrer">
+                      <Play className="w-5 h-5" />
+                      Play Clip in New Tab
+                    </a>
                   </Button>
                 </div>
               </div>
@@ -136,9 +137,15 @@ const PodcastClips = () => {
               className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/30 shadow-soft hover:shadow-glow transition-all duration-300 hover:-translate-y-1 cursor-pointer"
             >
               <div className="flex items-start gap-4">
-                {/* Mini Play Button */}
-                <div className="flex-shrink-0 w-14 h-14 rounded-xl gradient-primary flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Play className="w-6 h-6 text-primary-foreground ml-0.5" fill="currentColor" />
+                {/* Mini Clip Preview */}
+                <div className="flex-shrink-0 w-20 h-20 rounded-xl overflow-hidden bg-black group-hover:scale-110 transition-transform duration-300">
+                  <video
+                    src={episode.videoSrc}
+                    className="w-full h-full object-cover"
+                    muted
+                    loop
+                    playsInline
+                  />
                 </div>
 
                 {/* Content */}
@@ -155,9 +162,20 @@ const PodcastClips = () => {
                   <h3 className="font-bold text-foreground mb-2 line-clamp-2 group-hover:text-primary transition-colors">
                     {episode.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground line-clamp-2">
+                  <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
                     {episode.description}
                   </p>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="px-0 h-8"
+                    asChild
+                  >
+                    <a href={episode.videoSrc} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-primary">
+                      <Play className="w-3 h-3" />
+                      Play clip
+                    </a>
+                  </Button>
                 </div>
               </div>
             </div>
