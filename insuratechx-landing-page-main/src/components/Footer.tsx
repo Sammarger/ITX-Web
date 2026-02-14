@@ -10,8 +10,8 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
-    { icon: Youtube, href: "https://youtube.com", label: "YouTube" },
+    { icon: Instagram, href: "https://www.instagram.com/insuratechx/?next=%2F", label: "Instagram" },
+    { icon: Youtube, href: "https://www.youtube.com/@InsuraTechX", label: "YouTube" },
     { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
   ];
 
